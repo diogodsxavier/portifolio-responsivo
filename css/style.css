@@ -10,15 +10,28 @@
 
 
 :root {
-    --main-color: #00eeff;
+    /* --main-color: #00eeff;
     --text-color: #ffff;
     --bg-color-01: #1f242d;
     --bg-color-02: #323946;
     --color-00: #0000001a;
 
-    /* Extra */
-    --color-01: #999999;
+    Extra */
+    /* --color-01: #999999;
     --color-02: #009539;
+    --color-03: #7950f2;
+    --color-04: #c00000;
+    --color-05: #232323; */
+
+    --main-color: #734338;
+    --text-color: #ffff;
+    --bg-color-01: #0C0D0C;
+    --bg-color-02: #181626;
+    --color-00: #0000001a;
+
+    /* Extra */
+    --color-01: #A6A5A1;
+    --color-02: #8C1C31;
     --color-03: #7950f2;
     --color-04: #c00000;
     --color-05: #232323;
@@ -118,7 +131,7 @@ span {
 
 .home-img img,
 .about-img img {
-    width: 100%;
+    width: 92%;
 }
 
 .about {
@@ -165,13 +178,13 @@ span {
 .services-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     min-height: 25rem;
     margin-bottom: 1rem;
 }
 
 .services-container .services-box {
-    padding: 2rem 1rem 2.5rem;
+    padding: 0rem 1rem 2.5rem;
     border-radius: 1.2rem;
     text-align: center;
     border: solid 0.15rem var(--bg-color-01);
@@ -185,7 +198,7 @@ span {
 }
 
 .services-box i {
-    font-size: 4.3rem;
+    font-size: 3rem;
     color: var(--main-color);
 }
 
@@ -194,14 +207,10 @@ span {
 }
 
 .services-box p {
+    display: flex;
+    align-items: center;
     margin: 0.5rem;
     letter-spacing: 0.1rem;
-    /* N lines ... */
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .portifolio {
@@ -274,43 +283,6 @@ span {
     color: var(--bg-color-02);
 }
 
-form {
-    max-width: 45rem;
-    margin: 0.6rem auto;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-form .input-box input,
-form textarea {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    color: var(--text-color);
-    background-color: var(--bg-color-02);
-    border-radius: 0.5rem;
-    margin: 0.4rem 0;
-}
-
-form textarea {
-    resize: none;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1.2rem;
-    background-color: var(--bg-color-01);
-}
-
 .social-media img {
     width: 3.5rem;
 }
@@ -357,6 +329,12 @@ footer {
 }
 
 /* -- button -- */
+
+/* -- Footer */
+footer {
+    text-align: center;
+}
+/* -- Footer */
 
 /* === menu hamburguer*/
 .menu-hamburguer {
@@ -412,7 +390,7 @@ footer {
 
     .home,
     .about {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 1.2rem;
     }
 
@@ -425,6 +403,10 @@ footer {
     .home-content,
     .about-content {
         width: 100%;
+    }
+
+    .home-content h3 {
+        font-size: 1.4em;
     }
 
     .home-content div {
@@ -445,13 +427,12 @@ footer {
 
     .services-box {
         width: 100%;
+        min-height: 450px;
     }
 
-
-
-
-
-
+    .services-box bx {
+        margin-top: 10px;
+    }
 
 
     .portifolio-box .portifolio-layer {
@@ -460,7 +441,7 @@ footer {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(transparent, var(--main-color));
+        background: linear-gradient(transparent, #00eeff00);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -501,11 +482,9 @@ footer {
         color: var(--bg-color-02);
     }
 
-
-
-
-
-
+    footer p {
+        font-size: 0.83em;
+    }
 }
 
 /* Extra Small (xs): Smartphone (Landscape) */
